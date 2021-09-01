@@ -7,6 +7,9 @@ namespace TicTacToeGameBoard
    public class TicTacToeGame
     {
 
+        public char player;
+        public char computer;
+
         //UC1
         public void InitializeBoard()
         {
@@ -14,6 +17,31 @@ namespace TicTacToeGameBoard
 
             for (int i = 1; i < 10; i++)
                 board[i] = ' ';
+        }
+
+
+        //UC2 
+        public void ChooseOption()
+        {
+            Console.Write("Choose X or O : ");
+
+            char input = Convert.ToChar(Console.ReadLine());
+            //if player selects X
+            if (input == 'X')
+            {
+                player = 'X';
+                computer = 'O';
+            }
+            //if player selects O
+            else if (input == 'O')
+            {
+                computer = 'O';
+                player = 'X';
+            }
+            else
+            {
+                Console.WriteLine("Invalid player input");
+            }
         }
 
     }
