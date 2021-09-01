@@ -9,6 +9,7 @@ namespace TicTacToeGameBoard
 
         public char player;
         public char computer;
+        
 
         //UC1
         public void InitializeBoard()
@@ -43,6 +44,19 @@ namespace TicTacToeGameBoard
                 Console.WriteLine("Invalid player input");
             }
         }
+
+        //UC3
+        public void ShowBoard()
+        {
+            Console.WriteLine(" " + "|" + "\t|");
+            Console.WriteLine("------------");
+            Console.WriteLine(" " + "|" + "\t|");
+            Console.WriteLine("------------");
+            Console.WriteLine(" " + "|" + "\t|");
+
+
+        }
+
 
     }
 }
